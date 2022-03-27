@@ -12,11 +12,11 @@ const btnFechar          = document.querySelector(".fechar")
 function pegarDadosFormulario(){   
     //RECUPERANDO VALOR DO CAMPO (TEXTAREA)
     const valorCampo  = textarea.value
-    const listaNomes  = valorCampo.split(",")
-    const tamanhoArray= listaNomes.length
-    const posicaoNome = gerarNumeroAleatorio(tamanhoArray)
-    const nome        = listaNomes[posicaoNome]
-    mostrarResultado(nome)
+    const listaElementos  = valorCampo.split(",")
+    const tamanhoArray= listaElementos.length
+    const posicaoElemento = gerarNumeroAleatorio(tamanhoArray)
+    const elemento        = listaElementos[posicaoElemento]
+    mostrarResultado(elemento)
     textarea.value = ""
 }
 
@@ -29,8 +29,8 @@ function gerarNumeroAleatorio(tamanhoArray){
     return  Math.floor(Math.random() * (tamanhoArray - 0) + 0)
 }
 
-function mostrarResultado(nome){
-    tagResultado.innerText = `Resultado: ${nome}`
+function mostrarResultado(elemento){
+    tagResultado.innerText = `Resultado: ${elemento}`
     popUpResultado.classList.add("mostrarResultado")   
 }
 
